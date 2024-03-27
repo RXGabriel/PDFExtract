@@ -23,7 +23,7 @@ class Person {
         this.documento = documento.replace(evaluateRegex(/\D/g), '')
         this.rua = rua.match(evaluateRegex(/(?<=\sa\s).*$/)).join()
         this.numero = numero
-        this.bairro = bairro.match(evaluateRegex(/(?<=\s)\w+$/)).join()
+        this.bairro = bairro.match(evaluateRegex(/(?<=\s).*$/)).join()
         this.estado = estado.replace(evaluateRegex(/\.$/), "")
     }
 }

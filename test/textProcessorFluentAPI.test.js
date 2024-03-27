@@ -102,5 +102,4 @@ describe('TextProcessorFluentAPI', () => {
         ]
         expect(result).to.be.deep.equal(expected)
     })
-
 })

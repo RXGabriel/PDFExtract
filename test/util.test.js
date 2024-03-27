@@ -9,7 +9,7 @@ describe('Util', () => {
     })
     it('Should return the same regex when it is safe', () => {
         const safeRegex = /^([a-z])$/
-        expect(() => evaluateRegex(safeRegex)).to.not.throw
+        expect(() => evaluateRegex(safeRegex)).to.not.throw()
         expect(evaluateRegex(safeRegex)).to.be.ok
     })
 })
