@@ -1,4 +1,5 @@
 const { evaluateRegex } = require('./util')
+const Person = require('./person')
 
 class TextProcessorFluentAPI {
     #content
@@ -23,7 +24,10 @@ class TextProcessorFluentAPI {
             .map(line => line.map(item => item.replace(trimSpaces, '')))
         return this
     }
-
+    mapPerson() {
+        this.#content = this.#content.map(line => new Person(line))
+        return this
+    }
     build() {
         return this.#content;
     }
